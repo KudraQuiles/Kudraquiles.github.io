@@ -288,6 +288,54 @@
       border: 0;
     }
 
+    .mural-feature {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      background:
+        linear-gradient(135deg, rgba(14,39,53,0.2), rgba(19,22,26,0.4)),
+        radial-gradient(circle at top left, rgba(214,182,123,0.9), transparent 26%),
+        linear-gradient(135deg, #2d5d57 0%, #d6b67b 100%);
+    }
+
+    .mural-feature::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+      opacity: 0.6;
+    }
+
+    .mural-badge {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      color: #fff;
+      width: 100%;
+      min-height: 100%;
+      text-shadow: 0 12px 30px rgba(0,0,0,0.18);
+    }
+
+    .mural-badge span {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .mural-badge strong {
+      margin-top: 8px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.1rem, 2.8vw, 3.2rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
     .project-body {
       padding: 20px 20px 18px;
     }
@@ -715,6 +763,27 @@
               <div class="meta">
                 <span>Partnerships</span>
                 <span>Public sector</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media mural-feature">
+              <div class="mural-badge">
+                <span>United Way</span>
+                <strong>Philanthropic mural<br />Luis Muñoz Marín Airport</strong>
+              </div>
+            </div>
+            <div class="project-body">
+              <span class="tag">Brand visibility</span>
+              <h3>United Way Airport Mural</h3>
+              <p>
+                Managed the strategic communications for a philanthropic mural at the Luis Muñoz Marín International Airport,
+                designed to elevate United Way brand recognition while supporting fundraising efforts and donor engagement.
+              </p>
+              <div class="meta">
+                <span>Campaign strategy</span>
+                <span>Fundraising</span>
               </div>
             </div>
           </article>
