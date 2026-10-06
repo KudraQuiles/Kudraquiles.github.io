@@ -1,560 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio | Strategic Communications, PR & Multimedia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #FAFAFA;
-            --text-main: #1A1A1A;
-            --text-muted: #555555;
-            --accent: #2C3E50;
-            --border-color: #E2E8F0;
-            --card-bg: #FFFFFF;
-            --font-serif: 'Playfair Display', serif;
-            --font-sans: 'Inter', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kudra Quiles | Strategic Communications & PR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f1eb;
+      --panel: #fffdfb;
+      --panel-strong: #f0e7df;
+      --ink: #1b1b1b;
+      --muted: #5e5a56;
+      --line: rgba(27,27,27,0.13);
+      --sage: #2f5d4d;
+      --sage-deep: #1d3f34;
+      --gold: #d7b273;
+      --shadow: 0 18px 48px rgba(18, 18, 18, 0.08);
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * { box-sizing: border-box; }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
+    html { scroll-behavior: smooth; }
 
-        nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 100;
-            padding: 16px 24px;
-        }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    video { max-width: 100%; display: block; }
 
-        .logo {
-            font-family: var(--font-serif);
-            font-weight: 600;
-            font-size: 1.2rem;
-            color: var(--text-main);
-            text-decoration: none;
-        }
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(12px);
+      background: rgba(245, 241, 235, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 74px;
+      gap: 24px;
+    }
 
-        .nav-links a:hover {
-            color: var(--accent);
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
 
-        .btn-resume {
-            background-color: var(--text-main);
-            color: #FFF !important;
-            padding: 8px 18px;
-            border-radius: 4px;
-            cursor: pointer;
-            border: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+    .brand-mark {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sage), var(--gold));
+      box-shadow: 0 0 0 4px rgba(47, 93, 77, 0.1);
+    }
 
-        .btn-resume:hover {
-            opacity: 0.9;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
 
-        header {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 70px 24px 40px 24px;
-            text-align: center;
-        }
+    .nav-links a:hover { color: var(--ink); }
 
-        h1 {
-            font-family: var(--font-serif);
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
+    .nav-cta {
+      background: var(--ink);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--ink);
+      transition: transform 0.2s ease;
+    }
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
-        }
+    .nav-cta:hover { transform: translateY(-1px); }
 
-        .ethics-badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
-            padding: 6px 16px;
-            border-radius: 20px;
-            background: var(--card-bg);
-        }
+    .hero {
+      padding: 64px 0 24px;
+    }
 
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px 80px 24px;
-        }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
 
-        .section-title {
-            font-family: var(--font-serif);
-            font-size: 1.8rem;
-            margin: 60px 0 30px 0;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-        }
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--sage);
+      font-weight: 700;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 32px;
-        }
+    h1 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.1rem, 5vw, 6rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      font-weight: 600;
+    }
 
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
+    .hero h1 .accent {
+      color: var(--sage);
+      display: block;
+    }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.05);
-        }
+    .lead {
+      margin-top: 24px;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
 
-        .card-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
 
-        .card-title {
-            font-family: var(--font-serif);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
-        }
+    .button {
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+      border: 1px solid var(--ink);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
 
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
+    .button.primary {
+      background: var(--ink);
+      color: #fff;
+    }
 
-        .media-container {
-            width: 100%;
-            margin-bottom: 16px;
-            border-radius: 4px;
-            overflow: hidden;
-            background-color: #F1F5F9;
-            position: relative;
-            min-height: 220px;
-        }
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
 
-        .media-container video, 
-        .media-container img,
-        .media-container iframe {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            display: block;
-            border: none;
-        }
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+    }
 
-        .img-clickable {
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
+    .hero-panel {
+      background: linear-gradient(135deg, #f8f4f0, #efe6dc);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
 
-        .img-clickable:hover {
-            opacity: 0.9;
-        }
+    .mini-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
 
-        .tags-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 12px;
-        }
+    .stat-box {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
 
-        .tag {
-            font-size: 0.75rem;
-            background-color: #F1F5F9;
-            color: #334155;
-            padding: 4px 10px;
-            border-radius: 4px;
-        }
+    .stat {
+      background: rgba(255,255,255,0.5);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 16px;
+    }
 
-        .btn-link {
-            display: inline-block;
-            margin-top: 10px;
-            font-size: 0.85rem;
-            color: var(--text-main);
-            font-weight: 600;
-            text-decoration: underline;
-        }
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
 
-        .contact-container {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 40px;
-            border-radius: 6px;
-            margin-top: 40px;
-        }
+    .stat span {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .hero-image {
+      margin-top: 18px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: #e8ddd0;
+    }
 
-        .form-group label {
-            display: block;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 6px;
-        }
+    .divider {
+      border-top: 1px solid var(--line);
+      margin: 26px 0 0;
+    }
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: inherit;
-        }
+    .section {
+      padding: 56px 0 0;
+    }
 
-        .btn-submit {
-            background-color: var(--text-main);
-            color: #FFF;
-            padding: 12px 28px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: 500;
-        }
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
 
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(2.1rem, 3vw, 3.2rem);
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
 
-        .modal-content {
-            background: #FFF;
-            padding: 30px;
-            max-width: 800px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            border-radius: 6px;
-            position: relative;
-        }
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 500px;
+    }
 
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            border: none;
-            background: none;
-        }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
 
-        footer {
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            padding: 40px 24px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+    .project-card {
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 24px rgba(18,18,18,0.03);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
 
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 15px; }
-            h1 { font-size: 2.1rem; }
-            .media-container iframe, .media-container video { height: 180px; }
-        }
-    </style>
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-media {
+      aspect-ratio: 16/11;
+      overflow: hidden;
+      background: #ebe2d8;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-media img,
+    .project-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-body {
+      padding: 20px 20px 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(47, 93, 77, 0.08);
+      color: var(--sage-deep);
+      border: 1px solid rgba(47, 93, 77, 0.15);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.38rem;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .project-meta {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .project-meta span:last-child {
+      color: var(--ink);
+    }
+
+    .feature-banner {
+      margin-top: 64px;
+      background: linear-gradient(135deg, #f1d5d5 0%, #e3d5ed 45%, #f0d9a7 100%);
+      border: 1px solid rgba(27,27,27,0.08);
+      border-radius: 26px;
+      padding: 30px 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-banner-inner {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .feature-banner h3 {
+      margin: 0 0 8px;
+      font-size: clamp(2.2rem, 3vw, 3.6rem);
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .feature-banner p {
+      margin: 0;
+      color: rgba(27,27,27,0.75);
+      max-width: 470px;
+      font-weight: 500;
+    }
+
+    .contact-wrap {
+      padding: 64px 0 90px;
+    }
+
+    .contact-box {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: 0 14px 28px rgba(27,27,27,0.04);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+
+    .contact-copy h3 {
+      margin: 0 0 12px;
+      font-size: clamp(2.2rem, 3vw, 3.2rem);
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+    }
+
+    .contact-copy p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 420px;
+    }
+
+    .contact-list {
+      margin-top: 24px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--sage);
+      display: inline-block;
+      box-shadow: 0 0 0 5px rgba(47,93,77,0.12);
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #faf8f5;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      color: var(--ink);
+      resize: vertical;
+      min-height: 52px;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--sage);
+      box-shadow: 0 0 0 4px rgba(47, 93, 77, 0.08);
+    }
+
+    textarea { min-height: 140px; }
+
+    .submit-btn {
+      margin-top: 6px;
+      border: none;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 999px;
+      padding: 16px 22px;
+      width: fit-content;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 26px 0 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(18,18,18,0.66);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 99;
+      padding: 24px;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #fff;
+      width: min(820px, 100%);
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+      padding: 28px 24px 24px;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      border: none;
+      background: transparent;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    .modal-card h3 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: -0.05em;
+      line-height: 1;
+    }
+
+    .resume-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .resume-item {
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .resume-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .resume-item small {
+      display: block;
+      color: var(--muted);
+      margin-bottom: 4px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .resume-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .resume-download {
+      margin-top: 22px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .feature-banner-inner,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 12px 0 18px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card-grid,
+      .field-row {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 42px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Professional Portfolio</a>
-            <div class="nav-links">
-                <a href="#pr">Public Relations</a>
-                <a href="#multimedia">Multimedia</a>
-                <a href="#contact">Contact</a>
-                <button class="btn-resume" onclick="openModal('resume-modal')">View Resume</button>
-            </div>
-        </div>
-    </nav>
-
-    <header>
-        <h1>Strategy, Communications & PR</h1>
-        <p class="subtitle">Public Relations Specialist | Multimedia Producer | Digital Media</p>
-        <span class="ethics-badge">Grounded in professional ethics and institutional integrity</span>
-    </header>
-
-    <main>
-
-        <h2 id="pr" class="section-title">Public Relations & Consulting</h2>
-        <div class="grid">
-            
-            <article class="card">
-                <div>
-                    <div class="media-container">
-                        <img src="Screenshot_20261005_220128_Chrome.jpg" alt="Metro PR coverage of Down Syndrome bill" class="img-clickable" onclick="openImageModal(this.src)">
-                    </div>
-                    <div class="card-tag">PR Consulting & Media Placement</div>
-                    <h3 class="card-title">Puerto Rican Down Syndrome Foundation</h3>
-                    <p class="card-desc">
-                        Coordinated strategic presence on national television (WAPA TV / <i>Pégate</i>) for the World Down Syndrome Day campaign, driving nationwide fundraising via ATH Móvil.
-                    </p>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Public Relations</span>
-                        <span class="tag">Media Placement</span>
-                        <span class="tag">Fundraising</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="media-container">
-                        <img src="Screenshot_20261006_012744_Chrome.jpg" alt="WAPA TV coverage for Down Syndrome campaign" class="img-clickable" onclick="openImageModal(this.src)">
-                    </div>
-                    <div class="card-tag">Press Relations & Institutional PR</div>
-                    <h3 class="card-title">PR Lottery Commemorative Ticket</h3>
-                    <p class="card-desc">
-                        Led media management and press release drafting to highlight the commemorative lottery ticket honoring the foundation, securing digital press coverage in major outlets (<i>Metro PR</i>).
-                    </p>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Earned Media</span>
-                        <span class="tag">Press Release</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="card-tag">Sole Department Management</div>
-                    <h3 class="card-title">Food Bank of Puerto Rico</h3>
-                    <p class="card-desc">
-                        Led full department communications. Secured key agreements with the Department of Agriculture (250k liters of raw milk rescued monthly) and coordinated corporate campaigns like "Be a Miracle" with KFC.
-                    </p>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Government Alliances</span>
-                        <span class="tag">Co-Branding</span>
-                        <span class="tag">Institutional PR</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <h2 id="multimedia" class="section-title">Audiovisual Production & Multimedia</h2>
-        <div class="grid">
-
-            <article class="card">
-                <div>
-                    <div class="media-container">
-                        <video controls preload="metadata">
-                            <source src="20260059_455540504838984_1876869952091193344_n.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="card-tag">Municipality of Canóvanas</div>
-                    <h3 class="card-title">"Noches de Cultura" Event Coverage</h3>
-                    <p class="card-desc">
-                        Social media management, on-site filming, and video editing designed to drive community engagement and promote local cultural tourism.
-                    </p>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Social Media Management</span>
-                        <span class="tag">Video Editing</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="media-container">
-                        <video controls preload="metadata">
-                            <source src="248032219_416318729899678_1364362257096977021_n.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="card-tag">El Nuevo Día / Sal! PR</div>
-                    <h3 class="card-title">"La 18: Art + Gastronomy" Coverage</h3>
-                    <p class="card-desc">
-                        Fast-paced video production for Puerto Rico's leading gastronomy platform, highlighting live art and food truck culture.
-                    </p>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Videography</span>
-                        <span class="tag">Lifestyle PR</span>
-                    </div>
-                </div>
-            </article>
-
-            <article class="card">
-                <div>
-                    <div class="media-container">
-                        <iframe src="https://www.youtube.com/embed/GKnMi37fZCI" title="El Panal Documentary" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-tag">Social Documentary</div>
-                    <h3 class="card-title">"El Panal" Documentary</h3>
-                    <p class="card-desc">
-                        Field research and audiovisual production on community self-management and resilience in Caguas, Puerto Rico.
-                    </p>
-                    <a href="https://youtu.be/GKnMi37fZCI" target="_blank" class="btn-link">Watch on YouTube ↗</a>
-                </div>
-                <div>
-                    <div class="tags-list">
-                        <span class="tag">Production</span>
-                        <span class="tag">Storytelling</span>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <h2 id="contact" class="section-title">Contact</h2>
-        <div class="contact-container">
-            <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! I will get back to you shortly.');">
-                <div class="form-group">
-                    <label for="nombre">Full Name</label>
-                    <input type="text" id="nombre" required placeholder="Your name or company">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="mensaje">Message / Consulting Inquiry</label>
-                    <textarea id="mensaje" rows="5" required placeholder="How can I assist you with your project or communications strategy?"></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Message</button>
-            </form>
-        </div>
-
-    </main>
-
-    <div id="resume-modal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal('resume-modal')">&times;</button>
-            <h2 style="font-family: var(--font-serif); margin-bottom: 20px;">Professional Resume</h2>
-            
-            <h3 style="font-size: 1.1rem; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 15px;">Key Experience</h3>
-            
-            <p style="margin-top: 10px;"><strong>Independent Communications & PR Consultant</strong> (2026 - Present)<br>
-            Media strategy, spokesperson coordination, and partnership development for nonprofit organizations.</p>
-            
-            <p style="margin-top: 15px;"><strong>Communications & Marketing Officer</strong> — Food Bank of Puerto Rico<br>
-            Solo department management, nationwide fundraising campaigns, and government agreements.</p>
-            
-            <p style="margin-top: 15px;"><strong>Social Media Manager</strong> — Municipality of Canóvanas<br>
-            On-site event coverage, content creation, and institutional channel management.</p>
-
-            <p style="margin-top: 15px;"><strong>Videographer / Content Creator</strong> — El Nuevo Día (Sal! PR)<br>
-            Audiovisual production highlighting local gastronomy, art, and lifestyle culture.</p>
-
-            <h3 style="font-size: 1.1rem; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-top: 20px;">Core Competencies</h3>
-            <p style="margin-top: 10px;">Public Relations (PR) • Digital Strategy • Video Production & Editing • Crisis Management • Corporate & Government Partnerships • Copywriting</p>
-            
-            <div style="margin-top: 30px; text-align: right;">
-                <a href="Kudra_Quiles_Resume_.pdf" class="btn-submit" style="text-decoration: none;" target="_blank" rel="noopener">Download PDF</a>
-            </div>
-        </div>
+  <div class="topbar">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <span class="brand-mark"></span>
+        <span>Kudra Quiles</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#media">Media</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#resume" class="nav-cta">View Resume</a>
     </div>
+  </div>
 
-    <div id="image-modal" class="modal">
-        <div class="modal-content" style="background: transparent; text-align: center; max-width: 900px;">
-            <button class="close-modal" style="color: #FFF;" onclick="closeModal('image-modal')">&times;</button>
-            <img id="modal-img-src" src="" alt="Image Preview" style="max-width: 100%; max-height: 80vh; border-radius: 4px;">
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Strategic Communications • PR • Digital Media</p>
+        <h1>
+          Storytelling that moves people,
+          <span class="accent">campaigns that move missions.</span>
+        </h1>
+        <p class="lead">
+          I’m a communications and public relations professional focused on institutional visibility,
+          community engagement, and high-impact media strategy for organizations with a purpose.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="button primary">Let’s work together</a>
+          <a href="#work" class="button secondary">Explore projects</a>
         </div>
+      </div>
+
+      <aside class="hero-panel" id="about">
+        <div class="mini-label">Profile Snapshot</div>
+        <div class="stat-box">
+          <div class="stat">
+            <strong>8+</strong>
+            <span>Years in media & comms</span>
+          </div>
+          <div class="stat">
+            <strong>20+</strong>
+            <span>Campaigns supported</span>
+          </div>
+          <div class="stat">
+            <strong>100K+</strong>
+            <span>People reached</span>
+          </div>
+          <div class="stat">
+            <strong>PR</strong>
+            <span>Strategy & media placement</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="Screenshot_20261006_012948_Chrome.jpg" alt="Professional media campaign highlight" />
+        </div>
+      </aside>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 — Committed to ethical communications, transparency, and positive social impact.</p>
-    </footer>
+  <main>
+    <div class="container">
+      <section id="work" class="section">
+        <div class="section-header">
+          <h2>Selected PR work</h2>
+          <p>Strategic moments, partnerships, and visibility built through disciplined media outreach and audience-first storytelling.</p>
+        </div>
 
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = 'flex';
-        }
+        <div class="card-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="Screenshot_20261005_220128_Chrome.jpg" alt="Puerto Rican Down Syndrome Foundation campaign" />
+            </div>
+            <div class="project-body">
+              <span class="tag">PR Campaign</span>
+              <h3>Puerto Rican Down Syndrome Foundation</h3>
+              <p>
+                Coordinated national media placement and visibility for the World Down Syndrome Day campaign,
+                helping drive awareness and fundraising through public-facing partnerships.
+              </p>
+              <div class="project-meta">
+                <span>Media placement</span>
+                <span>WAPA TV</span>
+              </div>
+            </div>
+          </article>
 
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
+          <article class="project-card">
+            <div class="project-media">
+              <img src="Screenshot_20261006_012744_Chrome.jpg" alt="Loteria commemorative ticket media highlight" />
+            </div>
+            <div class="project-body">
+              <span class="tag">Institutional PR</span>
+              <h3>Lottery Commemorative Ticket</h3>
+              <p>
+                Led communications strategy for a commemorative ticket launch, building press momentum and supporting
+                institutional storytelling around recognition and public impact.
+              </p>
+              <div class="project-meta">
+                <span>Press strategy</span>
+                <span>Metro PR</span>
+              </div>
+            </div>
+          </article>
 
-        function openImageModal(src) {
-            document.getElementById('modal-img-src').src = src;
-            openModal('image-modal');
-        }
+          <article class="project-card">
+            <div class="project-media">
+              <img src="Screenshot_20261006_012948_Chrome.jpg" alt="Food Bank of Puerto Rico campaign" />
+            </div>
+            <div class="project-body">
+              <span class="tag">Nonprofit leadership</span>
+              <h3>Food Bank of Puerto Rico</h3>
+              <p>
+                Directed communications for a critical institutional program, securing strategic partnerships and reinforcing
+                mission-focused messaging around food access and community benefit.
+              </p>
+              <div class="project-meta">
+                <span>Partnerships</span>
+                <span>Public sector</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        }
-    </script>
+      <section id="media" class="section">
+        <div class="section-header">
+          <h2>Multimedia & production</h2>
+          <p>From live event coverage to short-form storytelling, I build content that is informative, aesthetic, and audience-centered.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <video controls preload="metadata">
+                <source src="20260059_455540504838984_1876869952091193344_n.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="project-body">
+              <span class="tag">Event coverage</span>
+              <h3>Noches de Cultura</h3>
+              <p>
+                On-site filming and editing to celebrate local culture, strengthen community presence, and create content with clear social engagement value.
+              </p>
+              <div class="project-meta">
+                <span>Video production</span>
+                <span>Local culture</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <video controls preload="metadata">
+                <source src="248032219_416318729899678_1364362257096977021_n.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+            <div class="project-body">
+              <span class="tag">Lifestyle media</span>
+              <h3>La 18: Art + Gastronomy</h3>
+              <p>
+                Fast-paced audiovisual storytelling for a lifestyle platform, highlighting artistic expression and community culture through dynamic production.
+              </p>
+              <div class="project-meta">
+                <span>Editorial video</span>
+                <span>Sal! PR</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <iframe src="https://www.youtube.com/embed/GKnMi37fZCI" title="El Panal documentary" allowfullscreen></iframe>
+            </div>
+            <div class="project-body">
+              <span class="tag">Documentary</span>
+              <h3>El Panal</h3>
+              <p>
+                Documentary storytelling centered on community resilience, self-management, and local knowledge in Puerto Rico.
+              </p>
+              <div class="project-meta">
+                <span>Production</span>
+                <span>Storytelling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="feature-banner">
+          <div class="feature-banner-inner">
+            <div>
+              <h3>Communications with purpose.</h3>
+            </div>
+            <div>
+              <p>
+                I help organizations shape visibility, build trust, and turn initiatives into narratives that resonate with the people they serve.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-wrap" id="contact">
+        <div class="contact-box">
+          <div class="contact-copy">
+            <p class="eyebrow" style="margin-bottom: 10px;">Let’s connect</p>
+            <h3>Tell me what you’re building.</h3>
+            <p>
+              Whether you need strategic media support, community engagement, content planning, or institutional storytelling, I’m ready to help.
+            </p>
+            <div class="contact-list">
+              <div class="contact-item"><span class="dot"></span> PR strategy</div>
+              <div class="contact-item"><span class="dot"></span> Media and communications</div>
+              <div class="contact-item"><span class="dot"></span> Multimedia production</div>
+            </div>
+          </div>
+
+          <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! I will get back to you shortly.');">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="field">
+              <label for="company">Organization</label>
+              <input id="company" type="text" placeholder="Company or organization" />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Tell me a little about your project or needs." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send inquiry</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="resume" aria-modal="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Close resume" onclick="document.getElementById('resume').classList.remove('open')">×</button>
+      <h3>Professional Resume</h3>
+      <div class="resume-list">
+        <div class="resume-item">
+          <small>2026 — Present</small>
+          <strong>Independent Communications & PR Consultant</strong>
+          <p>Media strategy, spokesperson coordination, and partnership development for nonprofit organizations.</p>
+        </div>
+        <div class="resume-item">
+          <small>Food Bank of Puerto Rico</small>
+          <strong>Communications & Marketing Officer</strong>
+          <p>Led communications operations, strategic fundraising campaigns, and cross-sector partnerships.</p>
+        </div>
+        <div class="resume-item">
+          <small>Municipality of Canóvanas</small>
+          <strong>Social Media Manager</strong>
+          <p>Managed institutional content, event coverage, and community engagement strategies.</p>
+        </div>
+        <div class="resume-item">
+          <small>El Nuevo Día / Sal! PR</small>
+          <strong>Videographer / Content Creator</strong>
+          <p>Produced lifestyle and cultural video coverage for digital audiences and media platforms.</p>
+        </div>
+      </div>
+      <div class="resume-download">
+        <a href="Kudra_Quiles_Resume_.pdf" target="_blank" rel="noopener" class="button primary">Download PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Kudra Quiles — Strategic communications, PR, and multimedia.
+  </footer>
+
+  <script>
+    const resumeButton = document.querySelector('.nav-cta');
+    if (resumeButton) {
+      resumeButton.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.getElementById('resume').classList.add('open');
+      });
+    }
+
+    document.addEventListener('click', function (event) {
+      const modal = document.getElementById('resume');
+      if (event.target === modal) {
+        modal.classList.remove('open');
+      }
+    });
+  </script>
 </body>
 </html>
