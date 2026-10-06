@@ -34,7 +34,6 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVIGATION */
         nav {
             position: sticky;
             top: 0;
@@ -94,7 +93,6 @@
             opacity: 0.9;
         }
 
-        /* HEADER */
         header {
             max-width: 900px;
             margin: 0 auto;
@@ -128,7 +126,6 @@
             background: var(--card-bg);
         }
 
-        /* MAIN CONTENT */
         main {
             max-width: 1100px;
             margin: 0 auto;
@@ -186,7 +183,6 @@
             margin-bottom: 16px;
         }
 
-        /* INTERACTIVE MULTIMEDIA */
         .media-container {
             width: 100%;
             margin-bottom: 16px;
@@ -240,7 +236,6 @@
             text-decoration: underline;
         }
 
-        /* CONTACT SECTION */
         .contact-container {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -260,7 +255,7 @@
             margin-bottom: 6px;
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group textarea {
             width: 100%;
             padding: 12px;
@@ -279,7 +274,6 @@
             font-weight: 500;
         }
 
-        /* MODALS */
         .modal {
             display: none;
             position: fixed;
@@ -332,7 +326,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav>
         <div class="nav-container">
             <a href="#" class="logo">Professional Portfolio</a>
@@ -345,7 +338,6 @@
         </div>
     </nav>
 
-    <!-- HEADER -->
     <header>
         <h1>Strategy, Communications & PR</h1>
         <p class="subtitle">Public Relations Specialist | Multimedia Producer | Digital Media</p>
@@ -354,14 +346,13 @@
 
     <main>
 
-        <!-- SECTION 1: PUBLIC RELATIONS & CONSULTING -->
         <h2 id="pr" class="section-title">Public Relations & Consulting</h2>
         <div class="grid">
             
             <article class="card">
                 <div>
                     <div class="media-container">
-                        <img src="1000087806.jpg" alt="WAPA TV Coverage" class="img-clickable" onclick="openImageModal(this.src)">
+                        <img src="Screenshot_20261005_220128_Chrome.jpg" alt="Metro PR coverage of Down Syndrome bill" class="img-clickable" onclick="openImageModal(this.src)">
                     </div>
                     <div class="card-tag">PR Consulting & Media Placement</div>
                     <h3 class="card-title">Puerto Rican Down Syndrome Foundation</h3>
@@ -381,7 +372,7 @@
             <article class="card">
                 <div>
                     <div class="media-container">
-                        <img src="1791264598882.jpeg" alt="Metro PR News Coverage" class="img-clickable" onclick="openImageModal(this.src)">
+                        <img src="Screenshot_20261006_012744_Chrome.jpg" alt="WAPA TV coverage for Down Syndrome campaign" class="img-clickable" onclick="openImageModal(this.src)">
                     </div>
                     <div class="card-tag">Press Relations & Institutional PR</div>
                     <h3 class="card-title">PR Lottery Commemorative Ticket</h3>
@@ -416,7 +407,6 @@
 
         </div>
 
-        <!-- SECTION 2: AUDIOVISUAL PRODUCTION & MULTIMEDIA -->
         <h2 id="multimedia" class="section-title">Audiovisual Production & Multimedia</h2>
         <div class="grid">
 
@@ -424,7 +414,7 @@
                 <div>
                     <div class="media-container">
                         <video controls preload="metadata">
-                            <source src="1000087708_2.mp4" type="video/mp4">
+                            <source src="20260059_455540504838984_1876869952091193344_n.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -446,7 +436,7 @@
                 <div>
                     <div class="media-container">
                         <video controls preload="metadata">
-                            <source src="1000087701_2.mp4" type="video/mp4">
+                            <source src="248032219_416318729899678_1364362257096977021_n.mp4" type="video/mp4">
                             Your browser does not support HTML5 video.
                         </video>
                     </div>
@@ -486,7 +476,6 @@
 
         </div>
 
-        <!-- SECTION 3: CONTACT FORM -->
         <h2 id="contact" class="section-title">Contact</h2>
         <div class="contact-container">
             <form onsubmit="event.preventDefault(); alert('Thank you for reaching out! I will get back to you shortly.');">
@@ -508,7 +497,6 @@
 
     </main>
 
-    <!-- RESUME MODAL -->
     <div id="resume-modal" class="modal">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal('resume-modal')">&times;</button>
@@ -532,12 +520,11 @@
             <p style="margin-top: 10px;">Public Relations (PR) • Digital Strategy • Video Production & Editing • Crisis Management • Corporate & Government Partnerships • Copywriting</p>
             
             <div style="margin-top: 30px; text-align: right;">
-                <a href="#" class="btn-submit" style="text-decoration: none;" onclick="alert('Link your downloadable PDF resume here.');">Download PDF</a>
+                <a href="Kudra_Quiles_Resume_.pdf" class="btn-submit" style="text-decoration: none;" target="_blank" rel="noopener">Download PDF</a>
             </div>
         </div>
     </div>
 
-    <!-- IMAGE PREVIEW MODAL -->
     <div id="image-modal" class="modal">
         <div class="modal-content" style="background: transparent; text-align: center; max-width: 900px;">
             <button class="close-modal" style="color: #FFF;" onclick="closeModal('image-modal')">&times;</button>
