@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional | Comunicaciones, PR & Multimedia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #FAFAFA;
+            --text-main: #1A1A1A;
+            --text-muted: #666666;
+            --accent: #2C3E50;
+            --border-color: #E5E5E5;
+            --card-bg: #FFFFFF;
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 24px 40px 24px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: var(--font-serif);
+            font-size: 2.8rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+        }
+
+        .ethics-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 6px 16px;
+            border-radius: 20px;
+            background: var(--card-bg);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 24px 80px 24px;
+        }
+
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin: 60px 0 30px 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 16px;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            background-color: #F0F0F0;
+            color: #444444;
+            padding: 3px 8px;
+            border-radius: 3px;
+        }
+
+        .media-container {
+            width: 100%;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .media-container video, 
+        .media-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 40px 24px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--text-main);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2.1rem; }
+            header { padding-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Estrategia, Comunicaciones & PR</h1>
+        <p class="subtitle">Especialista en Relaciones Públicas | Producción Audiovisual | Medios Digitales</p>
+        <span class="ethics-badge">Gestión basada en ética profesional y transparencia institucional</span>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN 1: RELACIONES PÚBLICAS Y CONSULTORÍA -->
+        <h2 class="section-title">Relaciones Públicas & Consultoría</h2>
+        <div class="grid">
+            
+            <article class="card">
+                <div class="card-tag">Consultoría PR & Medios</div>
+                <h3 class="card-title">Fundación Puertorriqueña del Síndrome Down</h3>
+                <p class="card-desc">
+                    Estrategia de comunicación y enlace con medios masivos para la campaña nacional del Día Mundial del Síndrome Down. Logro de cobertura televisiva en prime-time (WAPA TV) para impulsar la movilización de recursos vía ATH Móvil.
+                </p>
+                <div class="tags-list">
+                    <span class="tag">Relaciones Públicas</span>
+                    <span class="tag">Media Placement</span>
+                    <span class="tag">Fundraising</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-tag">Prensa & Gestión Institucional</div>
+                <h3 class="card-title">Reconocimiento Lotería de PR</h3>
+                <p class="card-desc">
+                    Gestión de prensa para la emisión del billete conmemorativo en honor a la inclusión social. Cobertura en medios digitales de alto tráfico (Metro Puerto Rico).
+                </p>
+                <div class="tags-list">
+                    <span class="tag">Earned Media</span>
+                    <span class="tag">Comunicado de Prensa</span>
+                    <span class="tag">Imagen Institucional</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-tag">Gestión Departamental & Alianzas</div>
+                <h3 class="card-title">Banco de Alimentos de Puerto Rico</h3>
+                <p class="card-desc">
+                    Liderazgo total del área de comunicaciones. Gestión de acuerdos con el Dpto. de Agricultura (250,000L de leche mensual) y alianzas corporativas masivas como "Sé un Milagro" junto a KFC.
+                </p>
+                <div class="tags-list">
+                    <span class="tag">Alianzas Gubernamentales</span>
+                    <span class="
